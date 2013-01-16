@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script src="../build/build.js"></script>
+	<script>
+		var inherits = require('inherits');
+		var A = function(){};
+
+		A.prototype.x = function(){
+			console.log('A:x')
+		};
+		A.prototype.y = function(){
+			console.log('A:y')
+		};
+
+		var B = function(){};		
+		
+		inherits(B, A, {
+			z:function(){
+				console.log(':z');
+			}
+		},{
+			stat: function(){
+				console.log('stat');
+			}
+		});
+
+		B.prototype.x = function () {
+			console.log('B:x');
+		}
+
+
+		var b = new B;
+		b.x();
+		b.y();
+		b.z();
+		B.stat();
+	</script>
+
+</body>
+</html>

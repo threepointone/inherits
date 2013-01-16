@@ -1,0 +1,15 @@
+{
+  "name": "inherits",
+  "repo": "threepointone/inherits",
+  "description": "simple inheritance",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "manuelstofer/each":"*"
+    },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
