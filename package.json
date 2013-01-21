@@ -8,10 +8,17 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha tests/test.js"
+    "test":"node_modules/.bin/component build --out tests --standalone inherits && node_modules/.bin/mocha tests/test.js && rm tests/build.js"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+
+    },
+  "devDependencies": {
+    "component":"*",
+    "mocha":"*",
+    "should":"*"
+
+    },
   "optionalDependencies": {
     "mocha":"*",
     "should":"*"
